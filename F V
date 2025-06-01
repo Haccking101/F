@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+      width: 200px;
+      height: 150px;
+      border: 2px solid white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.8);
+    }
+
+    .local-video video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .chat-controls {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 20px;
+    }
+
+    .chat-controls button {
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .chat-controls button:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <div class="video-chat-container">
+    <!-- Remote user -->
+    <div class="remote-video">
+      <video src="their-video.mp4" autoplay loop muted></video>
+    </div>
+
+    <!-- Local user -->
+    <div class="local-video">
+      <video src="your-video.mp4" autoplay loop muted></video>
+    </div>
+
+    <!-- Controls -->
+    <div class="chat-controls">
+      <button>Mute</button>
+      <button>End Call</button>
+      <button>Camera</button>
+    </div>
+  </div>
+</body>
+</html>
